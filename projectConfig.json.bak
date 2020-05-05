@@ -41,8 +41,7 @@
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
-    "./src/scss/mixins.scss",
-    "../../node_modules/metismenu/dist/metisMenu.css"
+    "./src/scss/mixins.scss"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"

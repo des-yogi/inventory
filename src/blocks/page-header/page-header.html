@@ -1,11 +1,39 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
 <header class="page-header" role="banner">
-  page-header
+  <div class="container">
+    <div class="page-header__inner">
+
+      <a href="index.html" class="logo" title="Инвентори-сервис логотип">
+        <img src="img/inventory-service-logo.png" alt="Инвентори-сервис логотип" width="62" height="62">
+      </a>
+
+      <button class="burger" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false" aria-controls="mobile-menu"><span class="visually-hidden">Кнопка меню</span></button>
+
+      <div class="page-header__service-menu">
+
+        <div class="lang-switcher  dropdown" id="lang-switcher">
+          <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
+          <div class="dropdown-menu" aria-labelledby="lang-switcher">
+            <a class="dropdown-item" href="#">UA</a>
+            <a class="dropdown-item" href="#">RU</a>
+          </div>
+        </div>
+
+        <div class="dropdown" id="phone-switcher">
+          <button class="dropdown-toggle  btn" type="button" id="phone-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Позвонить</button>
+          <div class="dropdown-menu" aria-labelledby="phone-switcher">
+            <a class="dropdown-item" href="tel:+380442090524">+38 044 209 05 24</a>
+            <a class="dropdown-item" href="tel:+380442090524">+38 044 209 05 24</a>
+          </div>
+        </div>
+
+      </div>
+
+      @@include('../metismenu/metismenu.html')
+
+    </div>
+  </div>
 </header>
