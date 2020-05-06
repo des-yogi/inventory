@@ -10,21 +10,24 @@
         <img src="img/inventory-service-logo.png" alt="Инвентори-сервис логотип" width="62" height="62">
       </a>
 
-      <button class="burger" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false" aria-controls="mobile-menu"><span class="visually-hidden">Кнопка меню</span></button>
+      <div class="burger__wrapper">
+        <!-- <span class="burger__helper">Закрыть</span> -->
+        <button id="mob-nav-toggler" class="burger" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-expanded="false" aria-controls="mobile-menu"><span class="visually-hidden">Кнопка меню</span></button>
+      </div>
 
       <div class="page-header__service-menu">
 
         <div class="lang-switcher  dropdown" id="lang-switcher">
-          <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RU</button>
+          <button class="dropdown-toggle" type="button" id="lang-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Укр</button>
           <div class="dropdown-menu" aria-labelledby="lang-switcher">
-            <a class="dropdown-item" href="#">UA</a>
-            <a class="dropdown-item" href="#">RU</a>
+            <a class="dropdown-item" href="#">Укр</a>
+            <a class="dropdown-item" href="#">Рус</a>
           </div>
         </div>
 
         <div class="dropdown" id="phone-switcher">
-          <button class="dropdown-toggle  btn" type="button" id="phone-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Позвонить</button>
-          <div class="dropdown-menu" aria-labelledby="phone-switcher">
+          <button class="dropdown-toggle  dropdown-toggle--arrow-none  btn  btn__icon  btn__icon--tel" type="button" id="phone-switcher-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Позвонить</button>
+          <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="phone-switcher">
             <a class="dropdown-item" href="tel:+380442090524">+38 044 209 05 24</a>
             <a class="dropdown-item" href="tel:+380442090524">+38 044 209 05 24</a>
           </div>

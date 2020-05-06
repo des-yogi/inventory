@@ -1,9 +1,133 @@
-// В этом файле должны быть стили для БЭМ-блока hero, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .hero {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $white;
+  background-color: $main-color;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: transparent;
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    height: 100%;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &::before {
+    left: -10px;
+  }
+
+  &::after {
+    right: -10px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(xl, 6);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(xl, 6);
+  }
+
+  &__img {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(62, 103, 30, 0.08), 0 12px 24px rgba(62, 103, 30, 0.12), 0 18px 32px rgba(62, 103, 30, 0.16);
+    border-radius: 20px;
+  }
+
+  &__text {
+
+    @media (min-width: $screen-md) {
+      position: relative;
+      padding-right: 20px;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 40px;
+      padding-bottom: 40px;
+    }
+
+    &::before {
+
+      @media (min-width: $screen-md) {
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -40px;
+        right: 0;
+        bottom: 0;
+        left: -135px;
+        background-color: $main-color;
+        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+
+      @media (min-width: $screen-lg) {
+        left: -160px;
+      }
+
+      @media (min-width: $screen-xl) {
+        left: -210px;
+      }
+    }
+  }
+
+  &__title {
+    color: inherit;
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    text-align: right;
+
+    &::before {
+      flex: 1 1 auto;
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: auto;
+      height: 4px;
+      margin-right: 20px;
+      border-radius: 5px;
+      background-color: $white;
+
+      @media (min-width: $screen-md) {
+        margin-right: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-right: 40px;
+      }
+    }
+  }
 }

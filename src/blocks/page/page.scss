@@ -131,9 +131,9 @@ img {
 }
 
 a {
-  color: $link-color;
+  color: inherit;
   background-color: transparent;
-  transition: color 0.3s;
+  transition: color 0.2s;
 
   &:hover,
   &:focus {
@@ -158,25 +158,24 @@ a {
 
 // BS4 Хелперы для BS4 табов и т.п.
 .fade {
-  transition: opacity 0.15s linear;
-}
+  @include transition($transition-fade);
 
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
+  &:not(.show) {
+    opacity: 0;
   }
 }
 
-.fade:not(.show) {
-  opacity: 0;
-}
-
 .collapse {
-  transition: all 0.3s ease-out;
+  &:not(.show) {
+    display: none;
+  }
 }
 
-.collapse:not(.show) {
-  display: none;
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
 }
 
 .visually-hidden {
@@ -257,15 +256,10 @@ a {
   );
 }
 
-/* &__element {
-  @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
-  @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
-  @include col(md, 4, $grid-columns, 12px);  // MD (768 по умолчанию) — 4 из 12, промежутки 12px
-  @include col(lg, 3, $grid-columns, 16px);  // LG (992 по умолчанию) — 3 из 12, промежутки 16px
-  @include col(xl, 2, $grid-columns, 20px);  // XL (1200 по умолчанию) — 2 из 12, промежутки 20px
-  @include col(xxl, 1, $grid-columns, 26px); // XXL (1800 по умолчанию) — 1 из 12, промежутки 26px
-} */
-
+/*
+@include col(xs, 12, $grid-columns, 20px);
+@include col(md, 6, $grid-columns, 30px);
+@include col(xl, 6);
+*/
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-

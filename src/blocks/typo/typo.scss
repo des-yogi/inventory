@@ -78,7 +78,12 @@ h1 {
   font-size: $font-size--h1;
 
   @media (min-width: $screen-md) {
+    margin-top: 0;
     font-size: $font-size--h1 * 1.5;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 0;
   }
 }
 
@@ -88,7 +93,12 @@ h2 {
   font-size: $font-size--h2;
 
   @media (min-width: $screen-md) {
+    margin-top: 0;
     font-size: $font-size--h2 * 1.23;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-top: 0;
   }
 }
 

@@ -1,9 +1,120 @@
-// В этом файле должны быть стили для БЭМ-блока chosen-link, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .chosen-link {
 
   $block-name:                &; // #{$block-name}__element
 
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 20px 20px 30px;
+  text-decoration: none;
+  color: $white;
+  background-color: $text-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/chosen-bg.jpg);
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-bottom: 60px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: $border-radius;
+    background: linear-gradient(180deg, rgba(9, 9, 9, 0.65) 5.76%, rgba(9, 9, 9, 0.25) 100%);
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    &::after {
+      background: $main-color;
+    }
+
+    #{$block-name}__title {
+
+      & > span {
+        color: inherit;
+      }
+    }
+  }
+
+
+  &__wrapper {
+
+  }
+
+  &__decor-title {
+
+  }
+
+  &__col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(xl, 4);
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: inherit;
+
+    & > span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: $main-color;
+    }
+  }
+
+  &--last {
+    padding-bottom: 40px;
+    background-color: $main-color;
+    background-image: none;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      width: 6px;
+      height: 10px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 6px 10px;
+      background-position: center;
+      background-image: svg-load('../blocks/chosen-link/bg-img/arrow-right.svg', fill=$main-color);
+      transition: all 0.2s ease-out;
+    }
+
+    &:hover,
+    &:focus {
+
+      &::before {
+        background-image: svg-load('../blocks/chosen-link/bg-img/arrow-right.svg', fill=$white);
+      }
+    }
+  }
 }
