@@ -1,9 +1,49 @@
-// В этом файле должны быть стили для БЭМ-блока ask-question, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .ask-question {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+
+    span {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__form-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12, $grid-columns, 30px);
+    @include col(lg, 12);
+    @include col(xl, 8);
+  }
+
+  &__half-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(lg, 6);
+    @include col(xl, 6);
+    margin-bottom: 20px;
+  }
+
+  &__full-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12, $grid-columns, 30px);
+    @include col(lg, 6);
+    @include col(xl, 12);
+    margin-bottom: 20px;
+  }
 }

@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/chosen-bg.jpg);
+  //background-image: url(../img/chosen-bg.jpg);
   border-radius: $border-radius;
   overflow: hidden;
 
@@ -54,13 +54,43 @@
     }
   }
 
-
   &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: $white;
 
+    @media (min-width: $screen-xl) {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
   }
 
   &__decor-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    &::after {
+
+      @media (min-width: $screen-sm) {
+        flex: 1 1 auto;
+        display: block;
+        content: "";
+        width: auto;
+        height: 4px;
+        margin-left: 20px;
+        border-radius: 5px;
+        background-color: $main-color;
+      }
+
+      @media (min-width: $screen-md) {
+        margin-left: 30px;
+      }
+
+      @media (min-width: $screen-xl) {
+        margin-left: 40px;
+      }
+    }
   }
 
   &__col {

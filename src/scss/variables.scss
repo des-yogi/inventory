@@ -33,6 +33,8 @@ $title-color:                 #090909;
 $text-muted:                  #c0c0c0;
 
 $body-bg:                     #f2f4f5;
+$footer-bg:                   $text-color;
+$copyrights-bg:               $title-color;
 
 $link-color:                  currentColor;
 $link-color--hover:           $add-color;
@@ -49,6 +51,8 @@ $font-size--h3:               22px;
 $font-size--h4:               18px;
 $font-size--h5:               16px;
 $font-size--h6:               16px;
+
+$font-size-sm:                16px;
 
 $line-height:                 1.6;
 

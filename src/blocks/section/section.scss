@@ -1,9 +1,76 @@
-// В этом файле должны быть стили для БЭМ-блока section, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col-1-2-3 {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(xl, 4);
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn-wrapper {
+    position: relative;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px;
+    }
+  }
+
+  &__btn-right {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col-offset(md, 6);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col-offset(xl, 8);
+    @include col(xl, 4);
+
+    .btn {
+      width: 100%;
+    }
+
+    &::before {
+
+      @media (min-width: $screen-md) {
+        display: block;
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(50% - 30px);
+        height: 4px;
+        background-color: $main-color;
+        border-radius: 5px;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: calc(67% - 40px);
+      }
+    }
+  }
+
+  &--one-row {
+
+    #{$block-name}__col-1-2-3 {
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }

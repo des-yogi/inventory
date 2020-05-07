@@ -1,9 +1,50 @@
-// В этом файле должны быть стили для БЭМ-блока news-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .news-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: $border-radius;
+  transition: box-shadow 0.2s ease-out;
 
   $block-name:                &; // #{$block-name}__element
 
+  &:hover,
+  &:focus {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+
+    #{$block-name}__title {
+      color: $main-color;
+    }
+  }
+
+  &__img {
+    flex: 0 0 auto;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 10px;
+    background-color: $white;
+
+    @media (min-width: $screen-md) {
+      padding: 20px;
+    }
+  }
+
+  &__content {
+    color: inherit;
+  }
+
+  &__title {
+    margin-top: 0;
+    transition: color 0.2s ease-out;
+  }
 }

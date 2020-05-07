@@ -37,7 +37,11 @@
     "page-caption": [],
     "client-block": [],
     "services": [],
-    "metismenu": []
+    "metismenu": [],
+    "field-text": [],
+    "field-actions": [],
+    "field-checkbox": [],
+    "socials": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
