@@ -1,9 +1,26 @@
-// В этом файле должны быть стили для БЭМ-блока service-link, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .service-link {
+  display: block;
+  height: 100%;
+  padding: 20px;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-decoration: none;
+  background-color: $white;
+  border-bottom: 4px solid $main-color;
+  border-radius: $border-radius;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-out;
+
+  @media (min-width: $screen-xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $main-color;
+  }
 
   $block-name:                &; // #{$block-name}__element
-
 }

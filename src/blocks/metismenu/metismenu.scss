@@ -1,0 +1,194 @@
+$background-color:    #fff !default;
+$title-color:         #090909 !default;
+$link-color--hover:   #3e671e !default;
+
+.topbar-nav {
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+  background: $background-color;
+
+  @media (min-width: $menu-desktop-width) {
+    width: auto;
+    flex: 1 1 auto;
+    margin-top: 0;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    right: -10px;
+    //width: 100vw;
+    height: 2px;
+    background-color: $main-color;
+
+    @media (min-width: $screen-md) {
+      left: -20px;
+      right: -20px;
+    }
+
+    @media (min-width: $menu-desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.topbar-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: $background-color;
+}
+
+.topbar-nav .metismenu {
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  display: flex;
+  //-webkit-box-orient: vertical;
+  //-webkit-box-direction: normal;
+  //-ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.topbar-nav .metismenu > li {
+  //-webkit-box-flex: 1;
+  //-ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  display: flex;
+  //-webkit-box-orient: vertical;
+  //-webkit-box-direction: normal;
+  //-ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.topbar-nav .metismenu a {
+  position: relative;
+  display: block;
+  padding: 12px 35px 12px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: right;
+  white-space: nowrap;
+  color: $title-color;
+  outline-width: 0;
+  transition: all .2s ease-out;
+  user-select: none;
+
+  @media (min-width: $menu-desktop-width) {
+    padding: 3px 18px 3px 18px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  &.has-arrow {
+
+    @media (min-width: $menu-desktop-width) {
+      padding: 3px 32px 3px 18px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      content: "";
+      width: 10px;
+      height: 6px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: 10px 6px;
+      background-position: center;
+      background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$main-color);
+      transform-origin: center;
+      transform: translateY(-50%);
+      transition: all .2s ease-out;
+      border: none;
+      //border-style: solid;
+      //border-width: 1px 0 0 1px;
+      //border-color: initial;
+    }
+  }
+}
+
+
+.topbar-nav .metismenu a:hover,
+.topbar-nav .metismenu a:focus,
+.topbar-nav .metismenu a:active {
+  color: $white;
+  text-decoration: none;
+  background: $link-color--hover;
+
+  &::after {
+    transform: translateY(-50%) rotate(-180deg);
+    background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
+  }
+}
+
+@media (min-width: $menu-desktop-width) {
+
+  .topbar-nav .metismenu {
+    //-webkit-box-orient: horizontal;
+    //-webkit-box-direction: normal;
+    //-ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .topbar-nav .metismenu > li {
+    //-webkit-box-orient: vertical;
+    //-webkit-box-direction: normal;
+    //-ms-flex-direction: column;
+    flex-direction: column;
+    flex: 0 1 auto;
+    border-bottom: none;
+    border-right: 2px solid $border-color;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .topbar-nav .metismenu > li > ul {
+    position: absolute;
+    top: 100%;
+    min-width: 100%;
+    z-index: 91;
+  }
+
+  .topbar-nav.is-hoverable .metismenu > li > ul {
+    height: auto !important;
+  }
+
+  .topbar-nav.is-hoverable .metismenu > li:hover > ul {
+    display: block;
+  }
+
+  .topbar-nav.is-hoverable .metismenu > li:hover > a.has-arrow::after {
+    //-webkit-transform: rotate(-135deg);
+    transform: translateY(-50%) rotate(-180deg);
+  }
+
+  .topbar-nav.collapse {
+
+    @media (min-width: $menu-desktop-width) {
+      display: block;
+    }
+  }
+}
+
+
+.metismenu {
+
+  $block-name:                &; // #{$block-name}__element
+
+}

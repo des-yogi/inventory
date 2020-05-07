@@ -34,8 +34,8 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
-    "gulp-csso": "^4.0.1",
     "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
     "gulp-debug": "^4.0.0",
     "gulp-file-include": "^2.1.0",
     "gulp-gh-pages": "^0.5.4",
@@ -62,21 +62,20 @@
     "lint-staged": "^10.1.2",
     "merge-stream": "^2.0.0",
     "mkdirp": "^0.5.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.14.1",
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^4.1.0",
     "postcss-object-fit-images": "^1.1.2",
     "stylelint": "^13.3.0",
     "vinyl-buffer": "^1.0.1",
-    "yaspeller": "^6.1.0"
+    "yaspeller": "^7.0.0"
   },
   "dependencies": {
-    "picturefill": "^3.0.3",
-    "ismobilejs": "^1.0.3",
     "blazy": "^1.8.2",
-    "jquery": "^3.4.1",
-    "jquery-migrate": "^3.1.0",
+    "jquery": "^3.5.1",
+    "metismenu": "^3.0.6",
     "object-fit-images": "^3.2.4",
+    "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9"
   }
 }
