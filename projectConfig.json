@@ -41,7 +41,10 @@
     "field-text": [],
     "field-actions": [],
     "field-checkbox": [],
-    "socials": []
+    "socials": [],
+    "caption-block": [],
+    "content-block": [],
+    "aside-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
