@@ -1,0 +1,13 @@
+.caption-block {
+  padding-top: 30px;
+  padding-bottom: 90px;
+  color: $white;
+  background-color: $main-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__title {
+    margin-bottom: 0;
+    color: inherit;
+  }
+}

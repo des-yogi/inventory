@@ -1,9 +1,94 @@
-// В этом файле должны быть стили для БЭМ-блока vacancy-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .vacancy-block {
+  margin-bottom: 30px;
+  background-color: $white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__caption {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+
+    @media (min-width: $screen-md) {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      padding: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 40px;
+    }
+
+    .btn {
+      width: 100%;
+
+      @media (min-width: $screen-md) {
+        flex: 0 1 auto;
+        width: auto;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md) {
+      flex: 1 1 auto;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: $main-color;
+
+      @media (min-width: $screen-md) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 30px 10px;
+    border-top: 2px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding: 40px 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 40px;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
 }

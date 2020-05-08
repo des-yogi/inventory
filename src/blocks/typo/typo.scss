@@ -171,11 +171,15 @@ li {
   line-height: inherit;
 }
 
+li + li {
+  margin-top: 0.5em;
+}
+
 hr {
   box-sizing: content-box; // Проблема Firefox
   height: 0;               // Проблема Firefox
   overflow: visible;       // Проблема Edge и IE
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 1em;
   border: 0;
   border-top: 1px solid $border-color;

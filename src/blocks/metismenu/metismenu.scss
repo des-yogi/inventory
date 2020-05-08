@@ -41,6 +41,10 @@ $link-color--hover:   #3e671e !default;
   margin: 0;
   list-style: none;
   background: $background-color;
+
+  li + li {
+    margin-top: 0;
+  }
 }
 
 .topbar-nav .metismenu {

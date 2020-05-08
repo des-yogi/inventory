@@ -1,0 +1,81 @@
+.content-block {
+  margin-top: -60px;
+  padding-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 60px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  // Вакакнсии и т.п. //
+
+  &__main-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12, $grid-columns, 30px);
+    @include col(xl, 8);
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__aside-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 12, $grid-columns, 30px);
+    @include col(xl, 4);
+  }
+
+  // Контакты //
+
+  &__contacts-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(xl, 6);
+  }
+
+  &__map-col {
+    @include col(xs, 12, $grid-columns, 20px);
+    @include col(md, 6, $grid-columns, 30px);
+    @include col(xl, 6);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__map-img {
+    margin-bottom: 20px;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+    }
+
+    // @media (min-width: $screen-xl) {
+    //   margin-bottom: 40px;
+    // }
+  }
+
+  &__map {
+    flex: 1 1 auto;
+    overflow: hidden;
+    border-radius: $border-radius;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 325px;
+      border: none;
+
+      @media (min-width: $screen-lg) {
+        min-height: 0;
+      }
+    }
+  }
+}
+
+//<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.228698074246!2d30.49290931621899!3d50.43684067947349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ceee69b34277%3A0x1e896093a96f5354!2z0YPQuy4g0JvRjNCy0LAg0KLQvtC70YHRgtC-0LPQviwgNjMsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1588932023071!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

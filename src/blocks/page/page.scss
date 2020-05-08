@@ -209,6 +209,10 @@ a {
   li::before {
     display: none;
   }
+
+  li + li {
+    margin-top: 0;
+  }
 }
 
 /* Кастомизируем выделение текста на сайте */
@@ -284,6 +288,20 @@ a {
     &::before {
       background-size: 12px 18px;
       background-image: svg-load('../blocks/sprite-svg/svg/question-mark.svg', fill=$white);
+    }
+  }
+
+  &--info {
+    &::before {
+      background-size: 24px 24px;
+      background-image: svg-load('../blocks/sprite-svg/svg/info-mark.svg', fill=$white);
+    }
+  }
+
+  &--quotes {
+    &::before {
+      background-size: 18px 14px;
+      background-image: svg-load('../blocks/sprite-svg/svg/quotes-mark.svg', fill=$white);
     }
   }
 }

@@ -1,9 +1,75 @@
-// В этом файле должны быть стили для БЭМ-блока contacts-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .contacts-block {
+  height: 100%;
+  padding: 30px 10px;
+  background-color: $white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-sm) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 40px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  .page-footer__menu {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid $border-color;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .page-footer__menu-item {
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .page-footer__menu-link {
+    color: $main-color;
+
+    &:hover,
+    &:focus {
+      color: $link-color--hover;
+    }
+  }
+
+  .ask-question__form {
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .ask-question__half-col {
+    @include col(md, 12, $grid-columns, 30px);
+    @include col(lg, 12);
+    @include col(xl, 12);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .ask-question__full-col {
+    @include col(lg, 12);
+  }
 }
