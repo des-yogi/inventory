@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Страница не найдена</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content  page__content--404">
+      @@include('blocks/page-header/page-header.html')
+
+      <main>
+        <div class="container  page-404">
+          <div class="row">
+
+            <div class="page-404__text-col">
+              <h1>Страница не найдена... <span>или не существует :(</span></h1>
+              <a href="index.html" class="btn">Вернуться на главную</a>
+            </div>
+
+            <div class="page-404__img-col">
+              <img src="img/p404.svg" alt="Page not found image. Erorr 404" width="580" height="182">
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

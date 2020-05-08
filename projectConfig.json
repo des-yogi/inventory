@@ -44,7 +44,9 @@
     "socials": [],
     "caption-block": [],
     "content-block": [],
-    "aside-card": []
+    "aside-card": [],
+    "service-card": [],
+    "aside-menu": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

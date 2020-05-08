@@ -21,7 +21,18 @@
     }
   }
 
-  h3 {
+  h3,
+  h4 {
     margin-top: 0;
+  }
+
+  ul {
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px 0;
+      font-weight: 500;
+    }
   }
 }

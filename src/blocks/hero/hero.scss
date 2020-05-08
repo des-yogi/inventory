@@ -41,6 +41,7 @@
   &__img-col {
     @include col(xs, 12, $grid-columns, 20px);
     @include col(md, 6, $grid-columns, 30px);
+    @include col(lg, 6);
     @include col(xl, 6);
     margin-bottom: 20px;
 
@@ -52,6 +53,7 @@
   &__text-col {
     @include col(xs, 12, $grid-columns, 20px);
     @include col(md, 6, $grid-columns, 30px);
+    @include col(lg, 6);
     @include col(xl, 6);
   }
 
