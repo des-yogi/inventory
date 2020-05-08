@@ -28,6 +28,10 @@
 
   &__content {
     flex-grow: 1;
+
+    &--404 {
+      background-color: $white;
+    }
   }
 
   &__footer-wrapper {
@@ -266,6 +270,37 @@ a {
   font-size: 14px;
   font-weight: 500;
   color: $text-muted;
+}
+
+.col-1-2-3 {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6, $grid-columns, 30px);
+  @include col(lg, 6);
+  @include col(xl, 4);
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
+}
+
+.col-1-2-2 {
+  @include col(xs, 12, $grid-columns, 20px);
+  @include col(md, 6, $grid-columns, 30px);
+  @include col(lg, 6);
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
 }
 
 .icon-title {

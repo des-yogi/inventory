@@ -12,6 +12,7 @@
   &__col-1-2-3 {
     @include col(xs, 12, $grid-columns, 20px);
     @include col(md, 6, $grid-columns, 30px);
+    @include col(lg, 6);
     @include col(xl, 4);
     margin-bottom: 20px;
 
@@ -36,6 +37,8 @@
     @include col(xs, 12, $grid-columns, 20px);
     @include col-offset(md, 6);
     @include col(md, 6, $grid-columns, 30px);
+    @include col-offset(lg, 6);
+    @include col(lg, 6);
     @include col-offset(xl, 8);
     @include col(xl, 4);
 

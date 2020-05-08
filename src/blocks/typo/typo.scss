@@ -133,7 +133,6 @@ p,
 ul,
 ol,
 dl,
-blockquote,
 pre,
 address,
 figure {
@@ -205,9 +204,43 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 45px;
+  padding-right: 10px;
+  margin-right: 1em;
+  margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
+  color: $title-color;
+  border-top: 2px solid $main-color;
+  border-bottom: 2px solid $main-color;
+
+  @media (min-width: $screen-md) {
+    padding-left: 52px;
+    padding-right: 20px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-color: $main-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 14px;
+    background-image: svg-load('../blocks/sprite-svg/svg/quotes-mark.svg', fill=$white);
+  }
+
+  footer {
+    font-size: smaller;
+    font-style: italic;
+  }
 }
 
 dt {

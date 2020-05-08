@@ -1,17 +1,19 @@
 $line-height:                 1.375em !default;
+
 $text-color:                  hsl(0, 0%, 10%) !default;
+
 $border-color:                hsl(0, 0%, 60%) !default;
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 20px;
   //margin-bottom: 60px;
 
   @media (min-width: $screen-md) {
     //justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -22,19 +24,21 @@ $border-color:                hsl(0, 0%, 60%) !default;
     list-style: none;
     margin: 0;
     padding-left: 0;
+    background-color: transparent;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
   }
 
   &__item {
-    margin-right: 0.5em;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin-top: 0 !important;
 
     &.active {
 
       a {
-        color: $main-color;
+        color: $white;
+        background-color: $main-color;
+        border-color: $main-color;
         pointer-events: none;
       }
     }
@@ -43,7 +47,8 @@ $border-color:                hsl(0, 0%, 60%) !default;
     &--next {
 
       #{$block-name}__link {
-        background-size: 8px 14px;
+        border: 2px solid $white;
+        background-size: 6px 10px;
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -53,16 +58,19 @@ $border-color:                hsl(0, 0%, 60%) !default;
       //margin-right: 20px;
 
       #{$block-name}__link {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
         transform: scale(-1, 1);
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$main-color);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$main-color);
         }
 
         &--disabled {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$text-muted);
         }
       }
     }
@@ -71,15 +79,18 @@ $border-color:                hsl(0, 0%, 60%) !default;
       //margin-left: 20px;
 
       #{$block-name}__link {
-        background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-color);
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+        background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$main-color);
 
         &:hover,
         &:focus {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$white);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$main-color);
         }
 
         &--disabled {
-          background-image: svg-load('../blocks/pagination/bg-img/right-arrow-icon.svg', fill=$text-muted);
+          background-image: svg-load('../blocks/pagination/bg-img/arrow-right.svg', fill=$text-muted);
         }
       }
     }
@@ -89,24 +100,26 @@ $border-color:                hsl(0, 0%, 60%) !default;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1;
+    line-height: inherit;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     color: $text-muted;
     background-color: $white;
+    border: 2px solid $white;
     border-radius: 0;
     transition: all 0.2s ease-out;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $white;
-      background-color: $main-color;
+      color: $main-color;
+      background-color: $white;
+      border-color: $main-color;
     }
 
     &--disabled,
