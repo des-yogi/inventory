@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакты</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <div class="container  caption-block">
+
+        @@include('blocks/breadcrumbs/breadcrumbs.html')
+
+        <h1 class="caption-block__title">Контактная информация</h1>
+
+      </div>
+
+      <div class="content-block">
+        <div class="container">
+          <main role="main">
+
+            <div class="row">
+
+              <div class="content-block__contacts-col">
+
+                <div class="contacts-block">
+
+                  <ul class="list-nostyled  page-footer__menu">
+                    <li class="page-footer__menu-item  page-footer__menu-item--full">
+                      <span>Адрес:</span>&ensp;<span>Украина</span>, <span>01004</span>, <span>м. Киев</span>, <span>ул. Льва Толстого 63, корпус 3</span>
+                    </li>
+                    <li class="page-footer__menu-item  page-footer__menu-item--full">
+                      <span>Телефоны:</span>&ensp;
+                      <a href="tel:+380442090524" class="page-footer__menu-link">+38 (044) 209-05-24</a>,&ensp;
+                      <a href="tel:+380442090524" class="page-footer__menu-link">+38 (044) 209-05-24</a>
+                    </li>
+                    <li class="page-footer__menu-item  page-footer__menu-item--full">
+                      <span>Email:</span>&ensp;<a href="mailto:vadym.b@invs.com.ua" class="page-footer__menu-link">vadym.b@invs.com.ua</a>
+                    </li>
+                  </ul>
+
+                  <form id="contactForm" class="ask-question__form" action="#" method="post">
+
+                    <h3>Отправить сообщение</h3>
+
+                    <div class="row">
+
+                      <div class="ask-question__half-col">
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="name" value="" placeholder="Ваше имя" required>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="ask-question__half-col">
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="tel" name="tel" value="" placeholder="Ваш телефон" required>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="ask-question__half-col">
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" name="email" value="" placeholder="Ваш email" required>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="ask-question__half-col">
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="subject" value="" placeholder="Тема сообщения">
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="ask-question__full-col">
+                        <label class="field-text">
+                          <span class="field-text__input-wrap">
+                            <textarea class="field-text__input  field-text__input--textarea" name="message" value="" placeholder="Текст сообщения"></textarea>
+                          </span>
+                        </label>
+                      </div>
+
+                      <div class="ask-question__half-col">
+                        <div class="field-actions">
+                          <input class="btn  btn--submit" type="submit" name="formSubmit" value="Отправить">
+                        </div>
+                      </div>
+
+                      <div class="ask-question__half-col">
+                        <div class="field-checkbox">
+                          <label class="field-checkbox__name">
+                            <input id="agreement" class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                            <span class="field-checkbox__name-text">Я згоден на обробку персональних даних</span>
+                          </label>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </form>
+
+                </div>
+
+              </div>
+
+              <div class="content-block__map-col">
+
+                <div class="embed-responsive  embed-responsive--4-3  content-block__map-img">
+                  <picture>
+                    <source data-srcset="img/map-img.webp" media="(min-width: 992px)" type="image/webp">
+                    <source data-srcset="img/map-img.jpg" media="(min-width: 992px)">
+                    <!-- 580x435 -->
+                    <source data-srcset="img/map-img.webp" media="(min-width: 768px)" type="image/webp">
+                    <source data-srcset="img/map-img.jpg" media="(min-width: 768px)">
+                    <!-- 460x345 -->
+                    <source data-srcset="img/map-img.webp" media="(min-width: 480px)" type="image/webp">
+                    <source data-srcset="img/map-img.jpg" media="(min-width: 480px)">
+                    <!-- 600x450 -->
+                    <source data-srcset="img/map-img.webp" type="image/webp">
+                    <img class="b-lazy" data-src="img/hero-img.jpg" src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== alt="Картинка" width="460" height="345">
+                  </picture>
+                </div>
+
+                <div id="map" class="content-block__map">
+                  <iframe class="b-lazy" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.228698074246!2d30.49290931621899!3d50.43684067947349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ceee69b34277%3A0x1e896093a96f5354!2z0YPQuy4g0JvRjNCy0LAg0KLQvtC70YHRgtC-0LPQviwgNjMsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1588932023071!5m2!1sru!2sua" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+              </div>
+
+            </div>
+
+          </main>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

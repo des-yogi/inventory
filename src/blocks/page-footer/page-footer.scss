@@ -73,6 +73,7 @@
   &__menu {
     display: flex;
     flex-wrap: wrap;
+    font-weight: 700;
   }
 
   &__menu-item {
@@ -91,6 +92,7 @@
   &__menu-link {
     display: inline-block;
     vertical-align: baseline;
+    font-weight: 500;
     text-decoration: none;
 
     &:hover,
