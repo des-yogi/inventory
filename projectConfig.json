@@ -46,7 +46,9 @@
     "content-block": [],
     "aside-card": [],
     "service-card": [],
-    "aside-menu": []
+    "aside-menu": [],
+    "service-page": [],
+    "client-page": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
