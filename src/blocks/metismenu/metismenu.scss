@@ -74,6 +74,14 @@ $link-color--hover:   #3e671e !default;
   &:last-child {
     border: none;
   }
+
+  &.mm-active a {
+
+    &::after {
+    transform: translateY(-50%) rotate(-180deg);
+      //background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
+    }
+  }
 }
 
 .topbar-nav .metismenu a {
@@ -134,10 +142,11 @@ $link-color--hover:   #3e671e !default;
   background: $link-color--hover;
 
   &::after {
-    transform: translateY(-50%) rotate(-180deg);
+    transform: translateY(-50%);
     background-image: svg-load('../blocks/metismenu/bg-img/arrow-bottom.svg', fill=$white);
   }
 }
+
 
 @media (min-width: $menu-desktop-width) {
 

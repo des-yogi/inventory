@@ -46,4 +46,12 @@
     @include col(xl, 12);
     margin-bottom: 20px;
   }
+
+  &--mt {
+    margin-top: 60px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+  }
 }

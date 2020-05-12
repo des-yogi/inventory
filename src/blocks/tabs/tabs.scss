@@ -18,6 +18,14 @@ $field-padding-horizontal:    0.7em !default;
   margin-top: $line-height;
   margin-bottom: $line-height;
 
+  &__wrapper {
+    margin-top: 40px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 60px;
+    }
+  }
+
   &__links {
     margin: 0;
     padding: 0;
@@ -41,17 +49,51 @@ $field-padding-horizontal:    0.7em !default;
 
   &__link-wrap {
     position: relative;
-    border: 1px solid $border-color;
+    margin-bottom: 20px;
+    //border: 1px solid $border-color;
+
+    & + & {
+      margin-top: 0;
+    }
 
     &:not(:last-child) {
+      margin-right: 10px;
       border-right: none;
+
+      @media (min-width: $screen-md) {
+        margin-right: 20px;
+      }
     }
 
     &--active {
 
       #{$block-name}__link {
-        color: $text-color;
-        background-color: #fff;
+        text-decoration: none;
+        color: $white;
+        background-color: $link-color--hover;
+        border-color: $link-color--hover;
+        box-shadow: $shadow-top;
+
+        &--price {
+          &::before {
+            background-size: 20px 20px;
+            background-image: svg-load('../blocks/sprite-svg/svg/dollar-icon.svg', fill=$white);
+          }
+        }
+
+        &--doc {
+          &::before {
+            background-size: 16px 20px;
+            background-image: svg-load('../blocks/sprite-svg/svg/doc-icon.svg', fill=$white);
+          }
+        }
+
+        &--info {
+          &::before {
+            background-size: 20px 20px;
+            background-image: svg-load('../blocks/sprite-svg/svg/info-mark.svg', fill=$white);
+          }
+        }
       }
     }
   }
@@ -59,21 +101,102 @@ $field-padding-horizontal:    0.7em !default;
   &__link {
     display: block;
     padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-color--muted;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: $line-height;
+    text-align: center;
     text-decoration: none;
-    background-color: $gray-lightest;
+    text-transform: none;
+    white-space: nowrap;
+    color: $main-color;
+    background-color: $white;
+    border: 2px solid $main-color;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    user-select: none;
+    transition: all 0.2s ease-out;
 
     &:hover,
     &:focus {
-      color: $text-color--muted;
+      text-decoration: none;
+      color: $white;
+      background-color: $link-color--hover;
+      border-color: $link-color--hover;
+      box-shadow: $shadow-top;
+    }
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--price {
+      &::before {
+        background-size: 20px 20px;
+        background-image: svg-load('../blocks/sprite-svg/svg/dollar-icon.svg', fill=$main-color);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-image: svg-load('../blocks/sprite-svg/svg/dollar-icon.svg', fill=$white);
+        }
+      }
+    }
+
+    &--doc {
+      &::before {
+        background-size: 16px 20px;
+        background-image: svg-load('../blocks/sprite-svg/svg/doc-icon.svg', fill=$main-color);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-image: svg-load('../blocks/sprite-svg/svg/doc-icon.svg', fill=$white);
+        }
+      }
+    }
+
+    &--info {
+      &::before {
+        background-size: 20px 20px;
+        background-image: svg-load('../blocks/sprite-svg/svg/info-mark.svg', fill=$main-color);
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-image: svg-load('../blocks/sprite-svg/svg/info-mark.svg', fill=$white);
+        }
+      }
     }
   }
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
-    border-top: none;
+    padding: 30px 10px;
+    background: $white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-md) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 40px;
+    }
   }
 
   &__content-item {
@@ -88,6 +211,10 @@ $field-padding-horizontal:    0.7em !default;
         display: block;
       }
     }
+  }
+
+  &__title {
+    margin-top: 0;
   }
 }
 
