@@ -3357,6 +3357,24 @@ input:checked ~ .field-checkbox__name-text::after {
 @media (min-width: 1280px) and (min-width: 1280px) {
   .topbar-nav.collapse {
     display: block; } }
+@media (max-width: 1279px) {
+      .js .main-nav__list {
+        overflow: hidden;
+        max-height: 0;
+        -webkit-transition: max-height 0.2s;
+        transition: max-height 0.2s; }
+      .js .main-nav--open .main-nav__list {
+        max-height: 100vh;
+        -webkit-transition: max-height 0.6s;
+        transition: max-height 0.6s; }
+      .main-nav__link--lvl-2 {
+        padding-left: 1.2em; }
+      .main-nav__link--lvl-3 {
+        padding-left: 2.4em; } }
+@media screen and (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    -webkit-transition: none;
+    transition: none; } }
 @media (prefers-reduced-motion: reduce) {
     .fade {
       -webkit-transition: none;
@@ -3435,23 +3453,5 @@ input:checked ~ .field-checkbox__name-text::after {
     table td,
     table th {
       background-color: #fff !important; } }
-@media (max-width: 1279px) {
-      .js .main-nav__list {
-        overflow: hidden;
-        max-height: 0;
-        -webkit-transition: max-height 0.2s;
-        transition: max-height 0.2s; }
-      .js .main-nav--open .main-nav__list {
-        max-height: 100vh;
-        -webkit-transition: max-height 0.6s;
-        transition: max-height 0.6s; }
-      .main-nav__link--lvl-2 {
-        padding-left: 1.2em; }
-      .main-nav__link--lvl-3 {
-        padding-left: 2.4em; } }
-@media screen and (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog {
-    -webkit-transition: none;
-    transition: none; } }
 
 /*# sourceMappingURL=style.min.css.map */
