@@ -2426,6 +2426,25 @@ input:checked ~ .field-checkbox__name-text::after {
   vertical-align: top;
   padding: 5px 0;
   font-weight: 500; }
+.aside-menu__item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e8eaeb; }
+.aside-menu__item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none; }
+.aside-menu__item.active .aside-menu__link {
+    color: #3e671e; }
+.aside-menu__link {
+  text-decoration: none;
+  color: inherit; }
+.aside-menu__link.h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700; }
+.aside-menu__lvl2 li.active a {
+  color: #3e671e; }
 .service-page {
   padding: 0; }
 .service-page__media-links-col {
