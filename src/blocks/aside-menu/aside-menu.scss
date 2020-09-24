@@ -1,9 +1,45 @@
-// В этом файле должны быть стили для БЭМ-блока aside-menu, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .aside-menu {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__item {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    &.active {
+      #{$block-name}__link {
+        color: $link-color--hover;
+        //pointer-events: none;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &.h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+  }
+
+  &__lvl2 {
+
+    li.active {
+
+      a {
+        color: $link-color--hover;
+        //pointer-events: none;
+      }
+    }
+  }
 }
