@@ -1,12 +1,12 @@
 # Инвентори-сервис
 
-* https://github.com/des-yogi/inventory/index.html
-* https://github.com/des-yogi/inventory/services.html
-* https://github.com/des-yogi/inventory/service-page.html
-* https://github.com/des-yogi/inventory/clients.html
-* https://github.com/des-yogi/inventory/client-page.html
-* https://github.com/des-yogi/inventory/contacts.html
-* https://github.com/des-yogi/inventory/news.html
-* https://github.com/des-yogi/inventory/text-page.html
-* https://github.com/des-yogi/inventory/vacancy.html
-* https://github.com/des-yogi/inventory/page-404.html
+* https://des-yogi.github.io/inventory/
+* https://des-yogi.github.io/inventory/services.html
+* https://des-yogi.github.io/inventory/service-page.html
+* https://des-yogi.github.io/inventory/clients.html
+* https://des-yogi.github.io/inventory/client-page.html
+* https://des-yogi.github.io/inventory/contacts.html
+* https://des-yogi.github.io/inventory/news.html
+* https://des-yogi.github.io/inventory/text-page.html
+* https://des-yogi.github.io/inventory/vacancy.html
+* https://des-yogi.github.io/inventory/page-404.html
